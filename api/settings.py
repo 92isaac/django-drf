@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,6 +120,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -130,7 +134,7 @@ JAZZMIN_SETTINGS ={
     "site_title": "Admin",
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the library",
+    "welcome_sign": "Admin",
 
         # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     "site_header": "Api",
