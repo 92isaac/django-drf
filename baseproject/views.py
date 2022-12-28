@@ -25,7 +25,7 @@ def default_endpoint(request):
     data = ['developers', '/developer/:details']
     return Response(data)
     
-@api_view(['GET', 'POST', 'PUT'])
+@api_view(['GET', 'POST'])
 def developers(request):
     # data = ['tayo', 'isaac', 'tumininu', 'lawyer kunle', 'rowland']
     # developers = Developer.objects.all()
